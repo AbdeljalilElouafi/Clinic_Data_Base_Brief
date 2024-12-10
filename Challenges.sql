@@ -93,4 +93,10 @@ FROM doctors
 JOIN departments ON doctors.department_id = departments.department_id
 GROUP BY department_name; 
 
+-- EXERCICE 12: 
+-- -----------
+SELECT 
+AVG(TIMESTAMPDIFF(YEAR, date_of_birth, CURRENT_DATE)) AS avg_age
+FROM patients;
+
 
