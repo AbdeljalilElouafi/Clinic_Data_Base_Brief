@@ -117,5 +117,36 @@ SELECT *
 FROM patients 
 WHERE email IS NULL OR email = '';
 
+-- EXERCICE 16: 
+-- -----------
+SELECT doctors.first_name, patients.first_name, appointment_id, reason 
+FROM appointments
+JOIN doctors ON appointments.doctor_id = doctors.doctor_id
+JOIN patients ON appointments.patient_id = patients.patient_id;
+
+-- EXERCICE 17: 
+-- -----------
+DELETE FROM appointments
+WHERE appointment_date < '2024-01-01';
+
+-- EXERCICE 18: 
+-- -----------
+UPDATE departments 
+SET department_name = 'Cancer Treatment'
+WHERE department_id = 4;
+
+-- EXERCICE 19: 
+-- -----------
+SELECT gender, COUNT(*) AS gender_number
+FROM patients
+GROUP BY gender
+HAVING COUNT(*) >= 2;
+
+-- EXERCICE 20: 
+-- -----------
+CREATE VIEW admissions_active 
+AS SELECT * FROM admissions 
+WHERE discharge_date IS NULL;
+
 
 
