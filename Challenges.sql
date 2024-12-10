@@ -105,5 +105,17 @@ SELECT
 MAX(appointment_date) AS dernier_rendez_vous
 FROM appointments;
 
+-- EXERCICE 14: 
+-- -----------
+SELECT room_id, SUM(admission_id) AS total_admissions
+FROM admissions
+GROUP BY room_id;
+
+-- EXERCICE 15: 
+-- -----------
+SELECT * 
+FROM patients 
+WHERE email IS NULL OR email = '';
+
 
 
