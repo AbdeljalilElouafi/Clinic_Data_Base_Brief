@@ -78,6 +78,11 @@ SELECT
 FROM Patients;
 
 
+-- EXERCICE 10: 
+-- -----------
 
+SELECT
+COUNT(appointment_id) AS total_appointments
+FROM appointments;
 
 
