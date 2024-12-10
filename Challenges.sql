@@ -99,4 +99,11 @@ SELECT
 AVG(TIMESTAMPDIFF(YEAR, date_of_birth, CURRENT_DATE)) AS avg_age
 FROM patients;
 
+-- EXERCICE 13: 
+-- -----------
+SELECT
+MAX(appointment_date) AS dernier_rendez_vous
+FROM appointments;
+
+
 
