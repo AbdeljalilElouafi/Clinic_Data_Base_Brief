@@ -86,3 +86,11 @@ COUNT(appointment_id) AS total_appointments
 FROM appointments;
 
 
+-- EXERCICE 11: 
+-- -----------
+SELECT department_name, COUNT(*) AS nombre_de_medecins 
+FROM doctors
+JOIN departments ON doctors.department_id = departments.department_id
+GROUP BY department_name; 
+
+
