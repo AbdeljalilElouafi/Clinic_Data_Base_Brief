@@ -107,7 +107,12 @@ FROM appointments;
 
 -- EXERCICE 14: 
 -- -----------
-SELECT room_id, SUM(admission_id) AS total_admissions
+SELECT 
+    room_id, 
+    SUM(CASE 
+        WHEN admission_id IS NOT NULL THEN 1 
+        ELSE 0 
+    END) AS total_approved_admissions
 FROM admissions
 GROUP BY room_id;
 
@@ -148,5 +153,36 @@ CREATE VIEW admissions_active
 AS SELECT * FROM admissions 
 WHERE discharge_date IS NULL;
 
+
+-- BONUS 1:
+-- --------
+
+
+
+
+
+
+
+
+-- BONUS 2:
+-- --------
+
+
+
+
+
+
+
+-- BONUS 3:
+-- --------
+
+
+
+
+
+
+
+-- BONUS 4:
+-- --------
 
 
